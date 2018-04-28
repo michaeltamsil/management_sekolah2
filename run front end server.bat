@@ -1,0 +1,1 @@
+http-server  "./front end/dev"
