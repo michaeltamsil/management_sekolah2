@@ -5,7 +5,7 @@ require.config({
         'backbone': `${nodeModulesPath}backbone/backbone`,
         'layoutmanager': `${nodeModulesPath}backbone.layoutmanager/backbone.layoutmanager`,
         'marionette': `${nodeModulesPath}backbone.marionette/lib/backbone.marionette`,
-        'radio': `${nodeModulesPath}backbone.radio/build/backbone.radio`,
+        'backbone.radio': `${nodeModulesPath}backbone.radio/build/backbone.radio`,
         'syphon': `${nodeModulesPath}backbone.syphon/lib/backbone.syphon`,
         'subroute': `${nodeModulesPath}backbone.subroute/dist/backbone.subroute.min`,
         'bootstrap': `${nodeModulesPath}bootstrap/dist/js/bootstrap.bundle`,

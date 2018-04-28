@@ -2,7 +2,7 @@ define((require, exports, module) => {
     'use strict'
 
     const Backbone = require('backbone'),
-        Radio = require('radio')
+        Radio = require('backbone.radio')
 
     module.exports = Backbone.Router.extend({
         initialize: function(){

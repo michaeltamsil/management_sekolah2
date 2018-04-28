@@ -1,39 +1,10 @@
 {
   "siswa": [
     {
-      "kelas": null,
-      "name": "1123",
-      "birthdate": "",
-      "gender": "laki-laki",
-      "id": 1
-    },
-    {
-      "name": "handay",
-      "id": 2
-    },
-    {
-      "nama": "budi",
-      "tanggal_lahir": "2018-04-11",
-      "jenis_kelamin": "laki-laki",
-      "id": 3
-    },
-    {
-      "nama": "helo",
-      "tanggal_lahir": "2018-04-05",
+      "nama": "afri",
+      "tanggal_lahir": "2018-04-01",
       "jenis_kelamin": "perempuan",
-      "id": 4
-    },
-    {
-      "nama": "",
-      "tanggal_lahir": "",
-      "jenis_kelamin": null,
-      "id": 5
-    },
-    {
-      "nama": "",
-      "tanggal_lahir": "",
-      "jenis_kelamin": null,
-      "id": 6
+      "id": 1
     }
   ]
 }

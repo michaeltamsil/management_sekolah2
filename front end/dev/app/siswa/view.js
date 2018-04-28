@@ -9,7 +9,15 @@ define((require, exports, module) => {
     module.exports = LayoutManager.extend({
         template: _.template(template),
         initialize() {
-            this.insertView('#table', new Table())
+            this.table = new Table()
+            this.on('cleanup', () => {
+                this.table.remove()
+            })
+            //this.insertView('#table', new Table())
+        },
+        afterRender() {
+            this.$('#table').append(this.table.$el)
+            this.table.render()
         }
     })
 })

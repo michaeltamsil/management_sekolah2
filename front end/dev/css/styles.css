@@ -1,3 +1,7 @@
 a.btn, a.btn:hover {
     color: black;
 }
+
+.tr-pointer > tr {
+    cursor: pointer;
+}
