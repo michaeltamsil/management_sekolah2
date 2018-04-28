@@ -7,10 +7,12 @@ require.config({
         'marionette': `${nodeModulesPath}backbone.marionette/lib/backbone.marionette`,
         'radio': `${nodeModulesPath}backbone.radio/build/backbone.radio`,
         'syphon': `${nodeModulesPath}backbone.syphon/lib/backbone.syphon`,
+        'subroute': `${nodeModulesPath}backbone.subroute/dist/backbone.subroute.min`,
         'bootstrap': `${nodeModulesPath}bootstrap/dist/js/bootstrap.bundle`,
         'jquery': `${nodeModulesPath}jquery/dist/jquery.min`,
         'underscore': `${nodeModulesPath}underscore/underscore`,
-        'text': `${libsPath}text-2.0.15`
+        'text': `${libsPath}text-2.0.15`,
+        'config': `${libsPath}config`
     },
     shim: {
         'backbone': {
@@ -26,6 +28,9 @@ require.config({
             deps: ['backbone']
         },
         'syphon': {
+            deps: ['backbone']
+        },
+        'subroute': {
             deps: ['backbone']
         }
     },
