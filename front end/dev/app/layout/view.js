@@ -10,8 +10,8 @@ define((require, exports, module) => {
     module.exports = LayoutManager.extend({
         id: 'layout',
         template: _.template(template),
-        Views:{
-            '#navbar': new Navbar(),
+        views:{
+            '#navbar': new NavBar(),
             '#sidebar': new SideBar(),
             '#content': new Content()
         }
