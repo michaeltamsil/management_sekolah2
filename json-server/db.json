@@ -1,10 +1,22 @@
 {
   "siswa": [
     {
-      "nama": "afri",
-      "tanggal_lahir": "2018-04-01",
+      "id": 3,
+      "nama": "Moh. fattah",
+      "tanggal_lahir": "1985-02-23",
+      "jenis_kelamin": "laki-laki"
+    },
+    {
+      "id": 4,
+      "nama": "Hendra ganteng",
+      "tanggal_lahir": "2018-04-04",
+      "jenis_kelamin": "perempuan"
+    },
+    {
+      "nama": "anjay",
+      "tanggal_lahir": "2018-04-06",
       "jenis_kelamin": "perempuan",
-      "id": 1
+      "id": 5
     }
   ]
 }

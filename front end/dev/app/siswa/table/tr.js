@@ -8,10 +8,17 @@ define((require, exports, module) => {
         template: _.template(template),
         events: {
             'click': 'showUpdate',
-            // 'click [name="delete"]': 'showDelete'
+            'click [name="delete"]': 'showDelete'
         },
         showUpdate(e) {
             window.location.hash += `/${this.model.id}`
         },
+        showDelete(e){
+            e.stopPropagation()
+            const result = window.confirm('apakah anda ingin menghapus data ini?')
+            if(result){
+                this.model.destroy()
+            }
+        }
     })
 })
