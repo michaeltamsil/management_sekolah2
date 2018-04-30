@@ -8,75 +8,9 @@
     "Sabtu",
     "Minggu"
   ],
-  "siswa": [
-    {
-      "kelas": "Kelas 2",
-      "id": 1,
-      "nama": "michael tamsil",
-      "tanggal_lahir": "2018-02-16",
-      "jenis_kelamin": "laki-laki"
-    }
-  ],
-  "guru": [
-    {
-      "mata_pelajaran": [
-        "angular js hey",
-        "PHP"
-      ],
-      "id": 1,
-      "nama": "guru",
-      "tanggal_lahir": "2018-04-01",
-      "jenis_kelamin": "perempuan"
-    },
-    {
-      "mata_pelajaran": [
-        "PHP",
-        "angular js hey"
-      ],
-      "id": 2,
-      "nama": "guru agung sekali",
-      "tanggal_lahir": "2000-02-12",
-      "jenis_kelamin": "laki-laki"
-    }
-  ],
-  "kelas": [
-    {
-      "id": 1,
-      "nama": "Kelas 1"
-    },
-    {
-      "nama": "Kelas 2",
-      "id": 2
-    }
-  ],
-  "mata_pelajaran": [
-    {
-      "id": 1,
-      "nama": "angular js hey"
-    },
-    {
-      "nama": "PHP",
-      "id": 2
-    },
-    {
-      "nama": "codeigniter",
-      "id": 3
-    },
-    {
-      "nama": "C#",
-      "id": 4
-    }
-  ],
-  "jadwal_pelajaran": [
-    {
-      "id": 1,
-      "kelas": "Kelas 2",
-      "hari": "Sabtu",
-      "mata_pelajaran": [
-        "PHP",
-        "PHP",
-        "PHP"
-      ]
-    }
-  ]
+  "siswa": [],
+  "guru": [],
+  "kelas": [],
+  "mata_pelajaran": [],
+  "jadwal_pelajaran": []
 }
