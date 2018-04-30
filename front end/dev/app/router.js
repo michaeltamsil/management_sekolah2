@@ -5,26 +5,25 @@ define((require, exports, module) => {
         Radio = require('backbone.radio')
 
     module.exports = Backbone.Router.extend({
-        initialize: function(){
-            this.subRoute = {}
+        initialize(){
+            this.routerModule = {}
             this.channelLayout = Radio.channel('layout')
             this.channelLayout.reply('updateContent', this.fnNewModule, this)
         },
         routes:{
             '':'showDashboard',
-            'siswa(/*subroute)': 'loadRouterSiswa',
-            'guru(/*subroute)': 'loadRouterGuru',
-            'kelas': 'showKelas',
-            'mata_pelajaran': 'showMata_Pelajaran',
-            'jadwal_pelajaran': 'showJadwal_Pelajaran',
-            'raport': 'showRaport'
+            'siswa(/*subrouter)': 'loadRouterSiswa',
+            'guru(/*subrouter)': 'loadRouterGuru',
+            'kelas(/*subrouter)': 'loadRouterKelas',
+            'mata_pelajaran(/*subrouter)': 'showMata_Pelajaran',
+            'jadwal_pelajaran(/*subrouter)': 'showJadwal_Pelajaran',
+            'raport': 'showRaport',
         },
         start(){
             Backbone.history.start()
         },
         fnNewModule(View){
             this.newModule = new View()
-
             if(!this.layoutView){
                 require(['./layout/view'], View => {
                     this.layoutView = new View()
@@ -46,40 +45,57 @@ define((require, exports, module) => {
             })
         },
         loadRouterSiswa(){
-            if(!this.subRoute.siswa){
+            if(!this.routerModule.siswa){
                 require(['./siswa/router'], Router => {
-                    this.subRoute.siswa = new Router(`siswa`, {
+                    this.routerModule.siswa = new Router(`siswa`,{
                         createTrailingSlashRoutes: true
                     })
                 })
             }
         },
         loadRouterGuru(){
-            if(!this.subRoute.siswa){
-                require(['./guru/router'], Router => {
-                    this.subRoute.siswa = new Router(`guru`, {
+            if(!this.routerModule.guru){
+                require([`./guru/router`], Router => {
+                    this.routerModule.guru = new Router('guru',{
                         createTrailingSlashRoutes: true
                     })
                 })
             }
         },
-        showKelas(){
-            require(['./kelas/view'], View => {
-                this.fnNewModule(View)
-            })
+        loadRouterKelas(){
+            if(!this.routerModule.kelas){
+                require([`./kelas/router`], Router => {
+                    this.routerModule.kelas = new Router('kelas',{
+                        createTrailingSlashRoutes: true
+                    })
+                })
+            }
         },
         showMata_Pelajaran(){
-            require(['./mata_pelajaran/view'], View => {
-                this.fnNewModule(View)
-            })
+            if(!this.routerModule.mata_pelajaran){
+                require([`./mata_pelajaran/router`], Router => {
+                    this.routerModule.mata_pelajaran = new Router('mata_pelajaran',{
+                        createTrailingSlashRoutes: true
+                    })
+                })
+            }
         },
         showJadwal_Pelajaran(){
-            require(['./jadwal_pelajaran/view'], View => {
-                this.fnNewModule(View)
-            })
+            if(!this.routerModule.jadwal_pelajaran){
+                require([`./jadwal_pelajaran/router`], Router => {
+                    this.routerModule.jadwal_pelajaran = new Router('jadwal_pelajaran',{
+                        createTrailingSlashRoutes: true
+                    })
+                })
+            }
         },
         showRaport(){
             require(['./raport/view'], View => {
+                this.fnNewModule(View)
+            })
+        },
+        showNot_Found(){
+            require(['./not_found/view'], View => {
                 this.fnNewModule(View)
             })
         }

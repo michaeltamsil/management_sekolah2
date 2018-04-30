@@ -1,3 +1,21 @@
+div > add-remove:last-of-type [name="add"]{
+    display: block;
+}
+
+div > add-remove [name="add"],
+div > add-remove:last-of-type:first-of-type [name="remove"]{
+    display: none;
+}
+
+.counter{
+    counter-reset: number;
+}
+
+.counter > add-remove [counter="true"]::after{
+    counter-increment: number;
+    content: " " counter(number);
+}
+
 a.btn, a.btn:hover {
     color: black;
 }

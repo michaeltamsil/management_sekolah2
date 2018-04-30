@@ -5,6 +5,16 @@ define((require, exports, module) => {
         config = require('config')
 
     module.exports = Backbone.Model.extend({
-        urlRoot: `${config.urlAPI}guru`
+        urlRoot: `${config.urlAPI}guru`,
+        defaults(){
+            return {
+                mata_pelajaran: []
+            }
+        },
+        initialize(){
+            this.on('error',(model, response) => {
+                alert(response.statusText)
+            })
+        }
     })
 })

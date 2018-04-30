@@ -12,7 +12,8 @@ require.config({
         'jquery': `${nodeModulesPath}jquery/dist/jquery.min`,
         'underscore': `${nodeModulesPath}underscore/underscore`,
         'text': `${libsPath}text-2.0.15`,
-        'config': `${libsPath}config`
+        'config': `${libsPath}config`,
+        'function': `${libsPath}function`
     },
     shim: {
         'backbone': {

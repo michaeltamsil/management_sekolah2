@@ -1,43 +1,32 @@
 {
   "siswa": [
     {
-      "id": 3,
-      "nama": "Moh. fattah",
-      "tanggal_lahir": "1985-02-23",
+      "kelas": "Kelas 2",
+      "id": 1,
+      "nama": "michael tamsil",
+      "tanggal_lahir": "2018-02-16",
       "jenis_kelamin": "laki-laki"
-    },
-    {
-      "id": 4,
-      "nama": "Hendra ganteng",
-      "tanggal_lahir": "2018-04-04",
-      "jenis_kelamin": "perempuan"
-    },
-    {
-      "nama": "anjay",
-      "tanggal_lahir": "2018-04-06",
-      "jenis_kelamin": "perempuan",
-      "id": 5
-    },
-    {
-      "nama": "test",
-      "tanggal_lahir": "",
-      "jenis_kelamin": "laki-laki",
-      "id": 6
     }
   ],
   "guru": [
     {
-      "nama": "786",
-      "tanggal_lahir": "2018-04-19",
-      "jenis_kelamin": "laki-laki",
-      "id": 1
-    },
-    {
-      "nama": "567",
-      "tanggal_lahir": "",
-      "jenis_kelamin": "perempuan",
-      "id": 2
+      "mata_pelajaran": [
+        null
+      ],
+      "id": 1,
+      "nama": "guru",
+      "tanggal_lahir": "2018-04-01",
+      "jenis_kelamin": "perempuan"
     }
   ],
-  "kelas": []
+  "kelas": [
+    {
+      "id": 1,
+      "nama": "Kelas 1"
+    },
+    {
+      "nama": "Kelas 2",
+      "id": 2
+    }
+  ]
 }

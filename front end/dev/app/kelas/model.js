@@ -5,12 +5,7 @@ define((require, exports, module) => {
         config = require('config')
 
     module.exports = Backbone.Model.extend({
-        urlRoot: `${config.urlAPI}siswa`,
-        defaults(){
-            return {
-                kelas: ''
-            }
-        },
+        urlRoot: `${config.urlAPI}kelas`,
         initialize(){
             this.on('error', (model, response) => {
                 alert(response.statusText)
