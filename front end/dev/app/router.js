@@ -12,12 +12,8 @@ define((require, exports, module) => {
         },
         routes:{
             '':'showDashboard',
-            // 'siswa(/*subroute)': 'showSiswa',
             'siswa(/*subroute)': 'loadRouterSiswa',
-            // 'siswa/create': 'showSiswa',
-            // 'siswa/update': 'showSiswa',
-            // 'siswa/delete': 'showSiswa',
-            'guru': 'showGuru',
+            'guru(/*subroute)': 'loadRouterGuru',
             'kelas': 'showKelas',
             'mata_pelajaran': 'showMata_Pelajaran',
             'jadwal_pelajaran': 'showJadwal_Pelajaran',
@@ -49,11 +45,6 @@ define((require, exports, module) => {
                 this.fnNewModule(View)
             })
         },
-        // showSiswa(){
-        //     require(['./siswa/view'], View => {
-        //         this.fnNewModule(View)
-        //     })
-        // },
         loadRouterSiswa(){
             if(!this.subRoute.siswa){
                 require(['./siswa/router'], Router => {
@@ -62,12 +53,15 @@ define((require, exports, module) => {
                     })
                 })
             }
-            //if(!this.router)
         },
-        showGuru(){
-            require(['./guru/view'], View => {
-                this.fnNewModule(View)
-            })
+        loadRouterGuru(){
+            if(!this.subRoute.siswa){
+                require(['./guru/router'], Router => {
+                    this.subRoute.siswa = new Router(`guru`, {
+                        createTrailingSlashRoutes: true
+                    })
+                })
+            }
         },
         showKelas(){
             require(['./kelas/view'], View => {

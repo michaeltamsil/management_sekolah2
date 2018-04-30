@@ -5,7 +5,6 @@ define((require, exports, module) => {
         template = require('text!./template.html'),
         Table = require('./table/view')
 
-
     module.exports = LayoutManager.extend({
         template: _.template(template),
         initialize() {
@@ -13,7 +12,6 @@ define((require, exports, module) => {
             this.on('cleanup', () => {
                 this.table.remove()
             })
-            //this.insertView('#table', new Table())
         },
         afterRender() {
             this.$('#table').append(this.table.$el)

@@ -17,6 +17,27 @@
       "tanggal_lahir": "2018-04-06",
       "jenis_kelamin": "perempuan",
       "id": 5
+    },
+    {
+      "nama": "test",
+      "tanggal_lahir": "",
+      "jenis_kelamin": "laki-laki",
+      "id": 6
     }
-  ]
+  ],
+  "guru": [
+    {
+      "nama": "786",
+      "tanggal_lahir": "2018-04-19",
+      "jenis_kelamin": "laki-laki",
+      "id": 1
+    },
+    {
+      "nama": "567",
+      "tanggal_lahir": "",
+      "jenis_kelamin": "perempuan",
+      "id": 2
+    }
+  ],
+  "kelas": []
 }
