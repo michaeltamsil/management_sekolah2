@@ -10,18 +10,37 @@ define((require, exports, module) => {
     module.exports = LayoutManager.extend({
         className: 'row',
         template: _.template(template),
-        initialize() {
+        initialize(){
             this.model = new Model()
-            this.listenTo(this.model, 'sync', () => {
-                this.$('[name="close"]')[0].click()
+            this.listenTo(this.model, 'sync', ()=> {
+                let hashSplit = window.location.hash.split('/')
+                hashSplit.pop()
+                window.location.hash = `${hashSplit.join('/')}`
             })
         },
-        events: {
+        events:{
             'click [name="add"]': 'addMataPelajaran',
             'click [name="remove"]': 'removeMataPelajaran',
             'submit form': 'submitForm'
-        },afterRender() {
+        },
+        afterRender() {
             let self = this
+            fn.getDataKelas({
+                onSuccess(data){
+                    _.each(data, item => {
+                        self.$('[name="kelas"]').append(new Option(item.nama, item.nama))
+                    })
+                }
+            })
+
+            fn.getDataHari({
+                onSuccess(data){
+                    _.each(data, nama => {
+                        self.$('[name="hari"]').append(new Option(nama, nama))
+                    })
+                }
+            })
+
             fn.getDataMata_Pelajaran({
                 onSuccess(data){
                     _.each(data, item => {

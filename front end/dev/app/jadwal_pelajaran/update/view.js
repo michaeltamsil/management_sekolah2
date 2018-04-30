@@ -2,10 +2,10 @@ define((require, exports, module) => {
     'use strict'
 
     const LayoutManager = require('layoutmanager'),
-    template = require('text!./template.html'),
-    Model = require('./../model'),
-    Syphon = require('syphon'),
-    fn = require('function')
+        template = require('text!./template.html'),
+        Model = require('./../model'),
+        Syphon = require('syphon'),
+        fn = require('function')
 
     module.exports = LayoutManager.extend({
         className: 'row',
@@ -20,7 +20,30 @@ define((require, exports, module) => {
             'submit form': 'submitForm'
         },
         afterRender() {
-            let self = this;
+            let self = this
+
+            const promiseGetDataKelas = new Promise((resolve, reject) => {
+                fn.getDataKelas({
+                    onSuccess(data){
+                        _.each(data, item => {
+                            self.$('[name="kelas"]').append(new Option(item.nama, item.nama))
+                        })
+                        resolve()
+                    }
+                })
+            })
+
+            const promiseGetDataHari = new Promise((resolve, reject) => {
+                fn.getDataHari({
+                    onSuccess(data){
+                        _.each(data, nama => {
+                            self.$('[name="hari"]').append(new Option(nama, nama))
+                        })
+                        resolve()
+                    }
+                })
+            })
+
             const promiseGetDataMata_Pelajaran = new Promise((resolve, reject) => {
                 fn.getDataMata_Pelajaran({
                     onSuccess(data){
@@ -33,10 +56,8 @@ define((require, exports, module) => {
                 })
             })
 
-
             this.model.once('sync', (model, data, response) => {
                 Syphon.deserialize(this, data)
-
                 if (data && data.mata_pelajaran && typeof data.mata_pelajaran == 'object' && data.mata_pelajaran.length){
                     this.$('[name="mata_pelajaran[]"]').val(data.mata_pelajaran[0])
                     for(let i = 0, length = data.mata_pelajaran.length; i < length; i++){
@@ -55,6 +76,8 @@ define((require, exports, module) => {
             })
 
             Promise.all([
+                promiseGetDataKelas,
+                promiseGetDataHari,
                 promiseGetDataMata_Pelajaran])
             .then(() => {
                 this.model.fetch()
@@ -69,7 +92,7 @@ define((require, exports, module) => {
         removeMataPelajaran(e) {
             $(e.currentTarget).parents('add-remove').remove()
         },
-        submitForm(e){
+        submitForm(e) {
             e.preventDefault()
             this.model.save(Syphon.serialize(this))
         }

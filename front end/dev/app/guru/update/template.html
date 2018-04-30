@@ -25,6 +25,18 @@
                         </select>
                     </div>
                 </div>
+                <div class="counter">
+                    <add-remove class="form-group row">
+                        <label for="mata_pelajaran" class="col-sm-4 col-form-label text-right" counter="true">Mata Pelajaran</label>
+                        <div class="input-group col-sm-8">
+                            <select class="form-control" name="mata_pelajaran[]"></select>
+                            <div class="input-group-append">
+                                <button class="btn btn-success" type="button" name="add"><i class="fa fa-plus"></i></button>
+                                <button class="btn btn-danger" type="button" name="remove"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                    </add-remove>
+                </div>
                 <div class="form-group row">
                     <div class="col-sm-8 offset-sm-4">
                         <button class="btn btn-success btn-sm" type="submit">Update</button>
