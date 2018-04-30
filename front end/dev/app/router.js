@@ -18,6 +18,7 @@ define((require, exports, module) => {
             'mata_pelajaran(/*subrouter)': 'showMata_Pelajaran',
             'jadwal_pelajaran(/*subrouter)': 'showJadwal_Pelajaran',
             'raport': 'showRaport',
+            '*anything': 'reRoute'
         },
         start(){
             Backbone.history.start()
@@ -98,6 +99,9 @@ define((require, exports, module) => {
             require(['./not_found/view'], View => {
                 this.fnNewModule(View)
             })
+        },
+        reRoute(){
+            window.location.hash = ''
         }
     })
 })

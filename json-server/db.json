@@ -8,9 +8,216 @@
     "Sabtu",
     "Minggu"
   ],
-  "siswa": [],
-  "guru": [],
-  "kelas": [],
-  "mata_pelajaran": [],
-  "jadwal_pelajaran": []
+  "siswa": [
+    {
+      "kelas": "Kelas 1 Pemula",
+      "nama": "Yulia Marza",
+      "tanggal_lahir": "1995-03-31",
+      "jenis_kelamin": "perempuan",
+      "id": 1
+    },
+    {
+      "kelas": "Kelas 1 Pemula",
+      "nama": "Ismail Zakaria",
+      "tanggal_lahir": "1990-09-17",
+      "jenis_kelamin": "laki-laki",
+      "id": 2
+    },
+    {
+      "kelas": "Kelas 1 Pemula",
+      "nama": "Gita Citra Puspita",
+      "tanggal_lahir": "1990-09-13",
+      "jenis_kelamin": "perempuan",
+      "id": 3
+    },
+    {
+      "kelas": "Kelas 1 Pemula",
+      "nama": "Aris Kurniawan",
+      "tanggal_lahir": "1989-12-23",
+      "jenis_kelamin": "laki-laki",
+      "id": 4
+    },
+    {
+      "kelas": "Kelas 2 Menengah",
+      "nama": "Yong Ming",
+      "tanggal_lahir": "1999-02-09",
+      "jenis_kelamin": "laki-laki",
+      "id": 5
+    },
+    {
+      "kelas": "Kelas 3 Mahir",
+      "nama": "Ridwan Irsyad",
+      "tanggal_lahir": "2000-08-09",
+      "jenis_kelamin": "laki-laki",
+      "id": 6
+    },
+    {
+      "kelas": "Kelas 2 Menengah",
+      "nama": "Eko Prasetiyo",
+      "tanggal_lahir": "1987-04-02",
+      "jenis_kelamin": "laki-laki",
+      "id": 7
+    },
+    {
+      "kelas": "Kelas 1 Pemula",
+      "nama": "Andhana Utama",
+      "tanggal_lahir": "1999-04-23",
+      "jenis_kelamin": "laki-laki",
+      "id": 8
+    },
+    {
+      "kelas": "Kelas 3 Mahir",
+      "nama": "Wenny Ong",
+      "tanggal_lahir": "1999-02-18",
+      "jenis_kelamin": "perempuan",
+      "id": 9
+    },
+    {
+      "kelas": "Kelas 2 Menengah",
+      "nama": "Hariselmi",
+      "tanggal_lahir": "1989-11-10",
+      "jenis_kelamin": "laki-laki",
+      "id": 10
+    }
+  ],
+  "guru": [
+    {
+      "mata_pelajaran": [
+        "Microcontroller PLC",
+        "Javascript"
+      ],
+      "nama": "Rony",
+      "tanggal_lahir": "1999-05-29",
+      "jenis_kelamin": "laki-laki",
+      "id": 1
+    },
+    {
+      "mata_pelajaran": [
+        "PHP",
+        "AngularJs"
+      ],
+      "nama": "Doni Gunawan",
+      "tanggal_lahir": "1999-06-16",
+      "jenis_kelamin": "laki-laki",
+      "id": 2
+    },
+    {
+      "mata_pelajaran": [
+        "PHP"
+      ],
+      "nama": "Hendra",
+      "tanggal_lahir": "2000-12-01",
+      "jenis_kelamin": "laki-laki",
+      "id": 3
+    },
+    {
+      "mata_pelajaran": [
+        "AngularJs"
+      ],
+      "nama": "Eric Lie",
+      "tanggal_lahir": "1996-08-05",
+      "jenis_kelamin": "laki-laki",
+      "id": 4
+    }
+  ],
+  "kelas": [
+    {
+      "nama": "Kelas 1 Pemula",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nama": "Kelas 2 Menengah"
+    },
+    {
+      "nama": "Kelas 3 Mahir",
+      "id": 3
+    }
+  ],
+  "mata_pelajaran": [
+    {
+      "nama": "Microcontroller PLC",
+      "id": 1
+    },
+    {
+      "nama": "PHP",
+      "id": 2
+    },
+    {
+      "nama": "C#",
+      "id": 3
+    },
+    {
+      "nama": "Javascript",
+      "id": 4
+    },
+    {
+      "nama": "MongoDB",
+      "id": 5
+    },
+    {
+      "nama": "AngularJs",
+      "id": 6
+    }
+  ],
+  "jadwal_pelajaran": [
+    {
+      "id": 1,
+      "kelas": "Kelas 1 Pemula",
+      "hari": "Senin",
+      "mata_pelajaran": [
+        "Microcontroller PLC",
+        "Javascript"
+      ]
+    },
+    {
+      "kelas": "Kelas 1 Pemula",
+      "hari": "Selasa",
+      "mata_pelajaran": [
+        "PHP",
+        "MongoDB"
+      ],
+      "id": 2
+    },
+    {
+      "kelas": "Kelas 1 Pemula",
+      "hari": "Rabu",
+      "mata_pelajaran": [
+        "AngularJs",
+        "MongoDB"
+      ],
+      "id": 3
+    },
+    {
+      "kelas": "Kelas 2 Menengah",
+      "hari": "Khamis",
+      "mata_pelajaran": [
+        "Javascript",
+        "MongoDB",
+        "AngularJs"
+      ],
+      "id": 4
+    },
+    {
+      "kelas": "Kelas 2 Menengah",
+      "hari": "Jumat",
+      "mata_pelajaran": [
+        "Javascript",
+        "MongoDB",
+        "AngularJs"
+      ],
+      "id": 5
+    },
+    {
+      "kelas": "Kelas 3 Mahir",
+      "hari": "Sabtu",
+      "mata_pelajaran": [
+        "Microcontroller PLC",
+        "Javascript",
+        "MongoDB",
+        "AngularJs"
+      ],
+      "id": 6
+    }
+  ]
 }
