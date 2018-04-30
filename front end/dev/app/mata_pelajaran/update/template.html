@@ -1,0 +1,24 @@
+<div class="col-sm-6">
+    <div class="card">
+        <h5 class="card-header">Update Kelas</h5>
+        <div class="card-body">
+            <form>
+                <div class="form-group row">
+                    <label for="nama" class="col-sm-4 col-form-label text-right">Name</label>
+                    <div class="col-sm-8">
+                        <input type="text" class="form-control" id="nama" name="nama">
+                    </div>
+                </div>
+                <div class="from-group row">
+                    <div class="col-sm-8 offset-sm-4">
+                        <button class="btn btn-success btn-sm" type="submit">Update</button>
+                        <a class="btn btn-default btn-sm" name="close" href="<%
+                        let hashSplit = window.location.hash.split('/')
+                        hashSplit.pop()
+                        print(`${hashSplit.join('/')}`) %>">Close</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

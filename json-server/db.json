@@ -28,5 +28,7 @@
       "nama": "Kelas 2",
       "id": 2
     }
-  ]
+  ],
+  "mata_pelajaran":[],
+  "jadwal_pelajaran":[]
 }
